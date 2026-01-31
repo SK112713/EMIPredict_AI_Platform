@@ -104,4 +104,4 @@ The dataset underwent extensive cleaning and preprocessing:
 1. Clone the repository:
 ```bash
 
-https://github.com/Tasneem-Inayath/EMIPredict-AI---Intelligent-Financial-Risk-Assessment-Platform
+https://github.com/SK112713/EMIPredict_AI_Platform
