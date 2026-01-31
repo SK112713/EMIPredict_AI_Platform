@@ -38,13 +38,13 @@ X = df.reindex(columns=trained_features, fill_value=0)
 classifier, regressor = None, None
 
 try:
-    classifier = mlflow.pyfunc.load_model("mlartifacts/924749176205125717/models/m-eca40b7e777b4d6e90c8b932547a17d6/artifacts")
+    classifier = mlflow.pyfunc.load_model("mlflow-artifacts:/924749176205125717/models/m-d90bea54c2f24c0cb97abe3d0a29fad7/artifacts")
     st.success("✅ Classifier Loaded")
 except Exception as e:
     st.error(f"❌ Classifier load failed: {e}")
 
 try:
-    regressor = mlflow.pyfunc.load_model("mlartifacts/779327931942531374/models/m-55b8bd1e138141f18d7b10d87989c3b3/artifacts")
+    regressor = mlflow.pyfunc.load_model("mlflow-artifacts:/779327931942531374/models/m-b266d1ede2664c169718ce8cc4e399eb/artifacts")
     st.success("✅ Regressor Loaded")
 except Exception as e:
     st.error(f"❌ Regressor load failed: {e}")
