@@ -37,6 +37,9 @@ with col1:
 
     if st.button("📘 MLflow Tracking"):
         st.switch_page("pages/model_explain.py")
+    
+    if st.button("📘 MLflow Tracking"):
+        st.switch_page("pages/model_explain_1.py")
 
 # Optional image or logo
 # st.image("logo.png", width=200)

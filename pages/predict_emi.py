@@ -15,7 +15,7 @@ label_encoder = joblib.load("label_encoder.pkl")
 # Load MLflow models
 # ------------------------
 classification_model = mlflow.pyfunc.load_model("mlartifacts/924749176205125717/models/m-eca40b7e777b4d6e90c8b932547a17d6/artifacts")
-regression_model = mlflow.pyfunc.load_model("mlartifacts/779327931942531374/models/m-55b8bd1e138141f18d7b10d87989c3b3/artifacts")
+regression_model = mlflow.pyfunc.load_model("mlartifacts//779327931942531374/models/m-55b8bd1e138141f18d7b10d87989c3b3/artifacts")
 
 # ------------------------
 # Helper function to compute features

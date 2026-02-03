@@ -38,13 +38,13 @@ X = df.reindex(columns=trained_features, fill_value=0)
 classifier, regressor = None, None
 
 try:
-    classifier = mlflow.pyfunc.load_model("mlflow-artifacts:/924749176205125717/models/m-d90bea54c2f24c0cb97abe3d0a29fad7/artifacts")
+    classifier = mlflow.pyfunc.load_model(r"mlartifacts\924749176205125717\models\m-54a470dbc0e74d96803fb11bb04aa40d\artifacts")
     st.success("✅ Classifier Loaded")
 except Exception as e:
     st.error(f"❌ Classifier load failed: {e}")
 
 try:
-    regressor = mlflow.pyfunc.load_model("mlflow-artifacts:/779327931942531374/models/m-b266d1ede2664c169718ce8cc4e399eb/artifacts")
+    regressor = mlflow.pyfunc.load_model(r"mlartifacts\779327931942531374\models\m-2f6f829b3ad74473904abb4d6ad82a5e\artifacts")
     st.success("✅ Regressor Loaded")
 except Exception as e:
     st.error(f"❌ Regressor load failed: {e}")
@@ -55,11 +55,11 @@ except Exception as e:
 st.subheader("📊 Versioned Model Metrics")
 
 client = MlflowClient()
-
+print(client)
 def show_metrics(model_name, label):
     versions = client.search_model_versions(f"name='{model_name}'")
     prod_models = [v for v in versions if v.current_stage == "Production"]
-
+    print(prod_models)
     if not prod_models:
         st.warning(f"No production model found for {label}")
         return
